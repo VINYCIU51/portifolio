@@ -1,5 +1,5 @@
 import styles from "./ProfilePhoto.module.css";
-import { normalizeValue } from "../../../utils/normalizeCssValue";
+import { normalizeValue } from "../../utils/normalizeCssValue";
 
 interface PhotoProps  {
     path : string;
@@ -13,8 +13,8 @@ export const ProfilePhoto = ({
      borderRadius = "50%"
     } : PhotoProps) => {
 
-        let normalizedSize = normalizeValue(size);
-        let normalizedRadius = normalizeValue(borderRadius);
+        const normalizedSize = normalizeValue(size);
+        const normalizedRadius = normalizeValue(borderRadius);
 
         return <
         img src = { path }
