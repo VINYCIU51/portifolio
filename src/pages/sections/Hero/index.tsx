@@ -1,7 +1,7 @@
-import { ProfilePhoto } from "../../../componens/ProfilePhoto/ProfilePhoto";
-import Photo from "../../../assets/images/demo1.png";
+import { ProfilePhoto } from "../../../components/ProfilePhoto/ProfilePhoto";
+import Photo from "../../../assets/images/gitProfile.webp";
 import "./style.css";
-import  {TypingText }  from "../../../componens/TypingText/TypingText";
+import  {TypingText }  from "../../../components/TypingText/TypingText";
 
 const  Hero = () => {
 
@@ -11,11 +11,11 @@ const  Hero = () => {
 
       <div className="title">
         <h2>Hi, I am a</h2>
-        <TypingText text={["FullStack Developer"]} />
+        <TypingText text={["FullStack Developer", "aaaaaa", "dor"]} />
       </div>
 
       <div className="title-complement">
-        <ProfilePhoto  path={Photo} size={ 300 } />
+        <ProfilePhoto  path={Photo} size="30dvw" />
       </div>
 
     </section>
