@@ -1,0 +1,9 @@
+:root {
+  --bg-dark: rgb(14, 14, 14);
+  --color-text: #f0f0ef;
+
+  --font-base: 'Segoe UI', Tahoma, sans-serif;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --spacing-sm: 8px;
+}

@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
-import "./TypingText.module.css";
+import  styles from "./TypingText.module.css";
 
 interface TypingProps {
   text: string[];
   speed?: number;
+  finalDelay?: number;
 }
 
-export const TypingText = ({ text, speed = 100 }: TypingProps) => {
+export const TypingText = ({ text, speed = 100, finalDelay= 400 }: TypingProps) => {
   const [displayText, setDisplayText] = useState("");
   const [charIndex, setCharIndex] = useState(0);
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
@@ -24,7 +25,9 @@ export const TypingText = ({ text, speed = 100 }: TypingProps) => {
       }
 
       if (!isDeleting && charIndex === currentText.length) {
-        setIsDeleting(true);
+        setTimeout(() => {
+          setIsDeleting(true);
+        },finalDelay);
         return;
       }
 
@@ -35,8 +38,10 @@ export const TypingText = ({ text, speed = 100 }: TypingProps) => {
       }
 
       if (isDeleting && charIndex === 0) {
-        setIsDeleting(false);
-        setCurrentTextIndex(prev => (prev + 1) % text.length);
+        setTimeout(() => {
+          setIsDeleting(false);
+          setCurrentTextIndex(prev => (prev + 1) % text.length);
+        },finalDelay);
         return;
       }
     }, speed);
@@ -45,9 +50,9 @@ export const TypingText = ({ text, speed = 100 }: TypingProps) => {
   }, [charIndex, isDeleting, currentText, speed, text.length]);
 
   return (
-    <span>
-      {displayText}
-      <span className="cursor">_</span>
+    <span className={styles.wrapper}>
+      <span className={styles.text}>{displayText}</span>
+      <span className={styles.cursor}></span>
     </span>
   );
 };

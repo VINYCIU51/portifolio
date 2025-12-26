@@ -1,14 +1,25 @@
-.text-type {
-  display: inline-block;
+.wrapper {
+  display: inline-flex;
+  align-items: flex-end;
+}
+
+.text {
   white-space: pre-wrap;
 }
 
-.text-type__cursor {
-  margin-left: 0.25rem;
-  display: inline-block;
-  opacity: 1;
+.cursor {
+  width: 0.3em;
+  height: 1.1em;
+  margin-left: 2px;
+  background-color: currentColor;
+  animation: blink 1s infinite; 
 }
 
-.text-type__cursor--hidden {
-  display: none;
+@keyframes blink {
+    0%, 40%{
+      opacity: 100;
+    }
+    100%{
+      opacity: 0;
+    }
 }

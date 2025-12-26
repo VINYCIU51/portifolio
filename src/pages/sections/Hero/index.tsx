@@ -11,7 +11,7 @@ const  Hero = () => {
 
       <div className="title">
         <h2>Hi, I am a</h2>
-        <TypingText text={["FullStack Developer", "aaaaaa", "dor"]} />
+        <TypingText text={["FullStack Developer", "Problem Solver", "dor"]} />
       </div>
 
       <div className="title-complement">

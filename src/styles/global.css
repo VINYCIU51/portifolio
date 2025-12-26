@@ -1,3 +1,5 @@
+@import "./variables.css";
+
 *{
     padding: 0;
     margin: 0;
@@ -5,10 +7,9 @@
 }
 
 body{
-    background-color: rgb(255, 255, 255);
     height: 100%;
     width: 100%;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family:var(--font-base);
 }
 
 section{
@@ -18,7 +19,7 @@ section{
     padding: 10%;
     height: 100dvh;
     width: 100%;
-    background-color: rgb(14, 14, 14);
+    background-color:var(--bg-dark);
 
     & div{
         display: flex;
@@ -28,5 +29,5 @@ section{
 }
 
 h1,h2,h3,h4,h5,h6,p,span {
-    color: #f0f0ef;
+    color: var(--color-text);
 }
