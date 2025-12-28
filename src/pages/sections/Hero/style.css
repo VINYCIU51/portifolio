@@ -1,14 +1,15 @@
 .title {
     flex-direction: column;
+    align-items: center;
     justify-content: center;
-    /* background-color: blue; */
 
-    & h1{
+    & h1 {
         font-size: 2.5rem;
     }
 
     & h2 {
         font-size: 2.5dvw;
+        font-weight: var(--font-regular);
     }
 
     & span {
@@ -17,9 +18,8 @@
     }
 }
 
-.title-complement{
+.title-complement {
     display: flex;
-    /* background-color: aquamarine; */
     align-items: center;
     justify-content: center;
 }
