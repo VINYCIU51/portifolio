@@ -1,9 +1,18 @@
 :root {
-  --bg-dark: rgb(14, 14, 14);
-  --color-text: #f0f0ef;
+    --bg-dark: rgb(2, 2, 2);
 
-  --font-base: 'Segoe UI', Tahoma, sans-serif;
-  --radius-sm: 4px;
-  --radius-md: 8px;
-  --spacing-sm: 8px;
+    /* ===== FONTES ===== */
+    --font-family-base: "KoHo", Segoe UI;
+    --font-color-light: #f0f0ef;
+
+    /*  pesos */
+    --font-light: 300;
+    --font-regular: 500;
+    --font-medium: 700;
+    --font-bold: 900;
+
+    /* ===== BORDAS ===== */
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --spacing-sm: 8px;
 }
