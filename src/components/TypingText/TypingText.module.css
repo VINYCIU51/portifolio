@@ -1,25 +1,22 @@
 .wrapper {
-  display: inline-flex;
-  align-items: flex-end;
+    display: inline-flex;
+    align-items: flex-end;
 }
 
 .text {
-  white-space: pre-wrap;
+    white-space: pre-wrap;
 }
 
 .cursor {
-  width: 0.3em;
-  height: 1.1em;
-  margin-left: 2px;
-  background-color: currentColor;
-  animation: blink 1s infinite; 
+    width: 0.3em;
+    height: 1.1em;
+    margin-left: 2px;
+    background-color: currentColor;
+    animation: blink 1s infinite;
 }
 
 @keyframes blink {
-    0%, 40%{
-      opacity: 100;
-    }
-    100%{
-      opacity: 0;
+    50% {
+        opacity: 0;
     }
 }
