@@ -1,15 +1,17 @@
 .wrapper {
     display: inline-flex;
     align-items: flex-end;
+    --textSize: 2rem;
 }
 
 .text {
-    white-space: pre-wrap;
+    white-space: nowrap;
+    font-size: var(--textSize);
 }
 
 .cursor {
     width: 0.3em;
-    height: 1.1em;
+    height: var(--textSize);
     margin-left: 2px;
     background-color: currentColor;
     animation: blink 1s infinite;

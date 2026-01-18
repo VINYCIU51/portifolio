@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import styles from "./TypingText.module.css";
+import { normalizeValue } from "../../utils/normalizeCssValue";
 
 interface TypingProps {
     text: string[];
@@ -7,6 +8,7 @@ interface TypingProps {
     finalDelay?: number;
     loop?: boolean;
     showCursor?: boolean;
+    textSize?: string | number;
 }
 
 export const TypingText = ({
@@ -14,6 +16,7 @@ export const TypingText = ({
     speed = 100,
     finalDelay = 400,
     loop = false,
+    textSize = "2rem",
 }: TypingProps) => {
     const [displayText, setDisplayText] = useState("");
     const [charIndex, setCharIndex] = useState(0);
@@ -21,6 +24,7 @@ export const TypingText = ({
     const [isDeleting, setIsDeleting] = useState(false);
 
     const currentText = text[currentTextIndex];
+    const normalizedTextSize = normalizeValue(textSize);
 
     useEffect(() => {
         const timeout = setTimeout(() => {
@@ -60,7 +64,14 @@ export const TypingText = ({
     }, [charIndex, isDeleting, currentText, speed, text.length]);
 
     return (
-        <span className={styles.wrapper}>
+        <span
+            className={styles.wrapper}
+            style={
+                {
+                    "--textSize": `${normalizedTextSize}`,
+                } as React.CSSProperties
+            }
+        >
             <span className={styles.text}>{displayText}</span>
             <span className={styles.cursor}></span>
         </span>
