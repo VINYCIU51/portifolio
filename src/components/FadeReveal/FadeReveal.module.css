@@ -1,0 +1,7 @@
+.fade {
+    height: var(--height);
+    width: var(--width);
+    position: absolute;
+    z-index: 10;
+    background: var(--gradient);
+}
